@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Interactive Web Portfolio with Three.js",
+      "description": "An immersive, animated portfolio built with Three.js, designed to present my professional experience and past projects in an engaging way. It features light/dark mode, multi-language support, and a built-in PDF resume generator for recruiters and clients.",
+      "image": "/images/project_1.webp",
+      "category": "Single Page Application",
+      "technologies": ["Next.js", "Three.js", "TailwindCSS", "Framer Motion"],
+      "link": "https://frontend-portfolio-weld.vercel.app",
+      "github": "https://github.com/DPuello/Frontend-portfolio"
+    },
+    {
+      "id": 2,
+      "title": "Rogue Space — Canvas Arcade Game",
+      "description": "A retro-style space shooter game developed in JavaScript using the Canvas API. Inspired by rogue-likes, the game allows players to acquire random upgrades and become overpowered to the point of breaking the game. The goal was to recreate that thrilling sense of unstoppable power in a fun, arcade format.",
+      "image": "/images/project_2.webp",
+      "category": "Web Game",
+      "technologies": ["JavaScript", "HTML5 Canvas", "CSS3"],
+      "link": "https://dpuello.github.io/spaceship-game/",
+      "github": "https://github.com/DPuello/spaceship-game"
+    },
+    {
+      "id": 3,
+      "title": "Creative Visual Portfolio",
+      "description": "A visually expressive portfolio showcasing my creative side in multimedia engineering. Includes 3D models, animations, and design projects I’ve crafted, along with samples of freelance video editing work. This project emphasizes both technical skill and artistic sensibility.",
+      "image": "/images/project_3.webp",
+      "category": "Web Portfolio",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "link": "https://dpuello.github.io/Juan-Daniel-Castaneda/",
+      "github": "https://github.com/DPuello/Juan-Daniel-Castaneda"
+    }
+  ]
+}

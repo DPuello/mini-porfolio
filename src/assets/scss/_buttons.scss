@@ -1,0 +1,116 @@
+@use 'sass:color';
+@use './variables' as vars;
+@use './mixins' as mix;
+
+.btn {
+  display: inline-block;
+  padding: vars.$spacing-2 vars.$spacing-4;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: vars.$font-size-base;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+
+  &:focus-visible {
+    outline: 3px solid vars.$primary-light;
+    outline-offset: 2px;
+
+    @include mix.dark-mode {
+      outline-color: vars.$primary-dark;
+    }
+  }
+
+  &--primary {
+    background-color: vars.$primary-light;
+    color: white;
+
+    &:hover {
+      background-color: color.adjust(vars.$primary-light, $lightness: -10%);
+    }
+
+    @include mix.dark-mode {
+      background-color: vars.$primary-dark;
+
+      &:hover {
+        background-color: color.adjust(vars.$primary-dark, $lightness: 10%);
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: vars.$secondary-light;
+    color: vars.$text-light;
+
+    &:hover {
+      background-color: color.adjust(vars.$secondary-light, $lightness: -5%);
+    }
+
+    @include mix.dark-mode {
+      background-color: vars.$secondary-dark;
+      color: vars.$text-dark;
+
+      &:hover {
+        background-color: color.adjust(vars.$secondary-dark, $lightness: 5%);
+      }
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid vars.$primary-light;
+    color: vars.$primary-light;
+
+    &:hover {
+      background-color: rgba(vars.$primary-light, 0.1);
+    }
+
+    @include mix.dark-mode {
+      border-color: vars.$primary-dark;
+      color: vars.$primary-dark;
+
+      &:hover {
+        background-color: rgba(vars.$primary-dark, 0.1);
+      }
+    }
+  }
+
+  &--small {
+    padding: vars.$spacing-1 vars.$spacing-2;
+    font-size: vars.$font-size-sm;
+  }
+
+  &--large {
+    padding: vars.$spacing-3 vars.$spacing-6;
+    font-size: vars.$font-size-lg;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

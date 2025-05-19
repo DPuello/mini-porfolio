@@ -1,0 +1,105 @@
+@use './variables' as vars;
+
+@mixin dark-mode {
+  .dark & {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin left-column {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -20px;
+  width: 10px;
+  height: 100%;
+  background-color: vars.$bg-accent-light;
+}
+
+@mixin right-column {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: -20px;
+  width: 10px;
+  height: 100%;
+  background-color: vars.$bg-accent-light;
+}
+
+@mixin right-circles {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: -20px;
+  width: 10px;
+  height: 10px;
+  background-color: vars.$bg-accent-light;
+  border-radius: 50%;
+  box-shadow:
+    20px 0 0 vars.$bg-accent-light,
+    40px 0 0 vars.$bg-accent-light,
+    0 15px 0 vars.$bg-accent-light,
+    20px 15px 0 vars.$bg-accent-light;
+}
+
+@mixin left-circles {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -40px;
+  width: 10px;
+  height: 10px;
+  background-color: vars.$bg-accent-light;
+  border-radius: 50%;
+  box-shadow:
+    -20px 0 0 vars.$bg-accent-light,
+    -40px 0 0 vars.$bg-accent-light,
+    0 -15px 0 vars.$bg-accent-light,
+    -20px -15px 0 vars.$bg-accent-light;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: vars.$breakpoint-sm) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (min-width: vars.$breakpoint-md) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: vars.$breakpoint-lg) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: vars.$breakpoint-xl) {
+      @content;
+    }
+  }
+}

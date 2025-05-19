@@ -1,0 +1,74 @@
+@use './variables' as vars;
+@use './mixins' as mix;
+
+.form {
+  &__group {
+    margin-bottom: vars.$spacing-4;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: vars.$spacing-2;
+    font-weight: 500;
+    color: vars.$text-light;
+
+    @include mix.dark-mode {
+      color: vars.$text-dark;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: vars.$spacing-3;
+    border: 1px solid vars.$gray-300;
+    border-radius: 0.375rem;
+    background-color: white;
+    color: vars.$text-light;
+    font-size: vars.$font-size-base;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+
+    @include mix.dark-mode {
+      background-color: vars.$gray-800;
+      border-color: vars.$gray-700;
+      color: vars.$text-dark;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: vars.$primary-light;
+      box-shadow: 0 0 0 2px rgba(vars.$primary-light, 0.2);
+
+      @include mix.dark-mode {
+        border-color: vars.$primary-dark;
+        box-shadow: 0 0 0 2px rgba(vars.$primary-dark, 0.2);
+      }
+    }
+
+    &--error {
+      border-color: vars.$bg-accent-light;
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba(vars.$bg-accent-light, 0.2);
+      }
+    }
+  }
+
+  &__textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  &__error {
+    display: block;
+    color: vars.$bg-accent-light;
+    font-size: vars.$font-size-sm;
+    margin-top: vars.$spacing-1;
+  }
+
+  &__submit {
+    margin-top: vars.$spacing-6;
+  }
+}

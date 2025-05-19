@@ -1,0 +1,22 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        { "name": "Next.js" },
+        { "name": "React" },
+        { "name": "JavaScript" },
+        { "name": "HTML/CSS" },
+        { "name": "TailwindCSS" }
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [{ "name": "Python" }, { "name": "SQL" }, { "name": "REST APIs" }]
+    },
+    {
+      "category": "Tools & Others",
+      "items": [{ "name": "Git" }, { "name": "Figma" }, { "name": "Adobe Suite" }]
+    }
+  ]
+}

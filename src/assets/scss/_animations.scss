@@ -1,0 +1,55 @@
+@use './variables' as vars;
+
+.fade-in {
+  opacity: 0;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.anim-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.anim-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.anim-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.anim-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.anim-delay-5 {
+  animation-delay: 0.5s;
+}
