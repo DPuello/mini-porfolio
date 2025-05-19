@@ -3,7 +3,7 @@
 This is a mini portfolio project. It's my first experience using Vue. I faced several challenges learning Vue and refreshing my knowledge of GSAP to apply it to Vue. The color palette is somewhat inspired by RAB2B but with my personal touch.
 I hope you enjoy viewing this project as much as I enjoyed creating it 😁
 
-![Portfolio preview](/screenshots/welcome.png)
+![Portfolio preview](/public/screenshots/welcome.png)
 
 ## 🚀 Features
 
@@ -91,7 +91,7 @@ This portfolio was created as an exercise to showcase capabilities and as a pers
 - The background image deformation in the welcome section is achieved through 3D matrices dynamically calculated based on scroll
 - The project uses custom SCSS mixins to maintain DRY code and facilitate global changes
 
-![Project card example](/screenshots/projects.png)
+![Project card example](/public/screenshots/projects.png)
 
 ## 📋 Technical Debt
 
