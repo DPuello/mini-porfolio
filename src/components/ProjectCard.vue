@@ -162,7 +162,6 @@ const handleBlur = (event) => {
 
 .card {
   justify-content: space-between;
-  cursor: pointer;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
